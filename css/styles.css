@@ -1,0 +1,171 @@
+body {
+  background-color: #f2f2f2;
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+a:active,
+a:focus,
+a:hover {
+  color: #000;;
+  background-color: rgba(24, 156, 24, 0.1);
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.title p:first-child {
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.title p {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+.title span {
+  text-decoration: underline;
+}
+
+
+.title-text {
+  margin-left: auto;
+  margin-right: auto;
+  flex-grow: 1;
+}
+
+.labs {
+  display: flex;
+  padding: 5px;
+  justify-content: space-around;
+  flex-basis: auto;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  padding: 10px 0;
+  margin-bottom: 10px;
+}
+
+.labs-content {
+  display: flex;
+
+}
+
+.lab {
+  border: black 2px solid;
+  border-radius: 15px;
+  padding: 0 0;
+  width: 150px;
+  text-align: center;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 15px;
+  max-width: 400px;
+  max-height: 300px;
+  width: 100%;
+  margin-right: 15px;
+}
+
+.list-item {
+  border: black 2px solid;
+  border-radius: 15px;
+  flex: 2 1 auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.list-item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.list-content {
+  border: black 2px solid;
+  border-radius: 15px;
+  flex-grow: 1;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  height: 500px;
+  padding: 10px 15px 0 15px;
+}
+
+.list-content h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+
+.list-content h3:first-child {
+  margin-bottom: 10px;
+}
+
+.list-content p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  margin-left: 15px;
+}
+
+.list-content a:hover,
+a:focus,
+a:active {
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.git {
+  text-decoration: underline;
+}
+
+.list-content li:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.list-content ul:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.list-content .elements {
+  text-align: center;
+}
+
+td:not(:last-child) {
+  width: 15%;
+}
+
+#id {
+  border-collapse: collapse;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+th,
+td {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px 0 5px 5px;
+}
+
+td:first-child {
+  text-align: center;
+}
