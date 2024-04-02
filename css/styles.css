@@ -121,7 +121,7 @@ a:hover {
   font-weight: 500;
   font-style: normal;
   min-height: 500px;
-  max-height: 1450px;
+  max-height: 1850px;
   padding: 10px 15px 0 15px;
 }
 
@@ -191,4 +191,8 @@ td:first-child {
 
 .lab3task1_img_main{
   width: 1100px;
+}
+
+.lab4task_img_main{
+  width: 400px;
 }
