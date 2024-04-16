@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Звіти з лабораторних робіт</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+     rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <header class="title">
+      <div class="title-text">
+        <p>
+          ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ <br/>
+          З ДИСЦИПЛІНИ "WEB-ОРІЄНТОВАНІ ТЕХНОЛОГІЇ.<br/>
+          ОСНОВИ FRONTEND та BACKEND РОЗРОБОК"
+        </p>
+        <p>Студент групи ІО-11 Куделя Олександр Сергійович</p>
+      </div>
+    </header>
+    <main>
+      <div class="labs">
+        <a href="../lab1/1lab.html" class="lab">Лабораторна <br/> робота №1</a>
+        <a href="../lab2/2lab.html" class="lab">Лабораторна <br/> робота №2</a>
+        <a href="../lab3/3lab.html" class="lab">Лабораторна <br/> робота №3</a>
+        <a href="../lab4/4lab.html" class="lab">Лабораторна <br/> робота №4</a>
+        <a href="5lab.html" class="lab">Лабораторна <br/> робота №5</a>
+        <a href="#" class="lab">Лабораторна <br/> робота №6</a>
+        <a href="#" class="lab">Лабораторна <br/> робота №7</a>
+        <a href="#" class="lab">Лабораторна <br/> робота №8</a>
+        <a href="#" class="lab">Лабораторна <br/> робота №9</a>
+      </div>
+      <div class="labs-content">
+        <div class="list">
+          <a href="topic-aim.html" class="list-item">Тема, мета, місце розташування лаби</a>
+          <a href="func_use.html" class="list-item">Способи функціонального <br/> застосування JavaScript</a>
+          <a href="URL.html" class="list-item-2">Схеми URL</a>
+          <a href="event.html" class="list-item-2">Обробник подій</a>
+          <a href="entity.html" class="list-item-2">Підстановка (entity)</a>
+          <a href="insert.html" class="list-item-2">Вставка (тег SCRIPT)</a>
+          <a href="task_1.html" class="list-item">Масиви (4 пункт)</a>
+          <a href="task_2.html" class="list-item">Виконання 6 пункту</a>
+          <a href="conclusions.html" class="list-item">Висновки</a>
+        </div>
+        <div class="list-content">
+          <h4>
+            Схеми URL в JavaScript
+          </h4>
+          <p>Схеми URL в JavaScript дозволяють працювати з URL-адресами, розбираючи їх на складові частини, такі як протокол, хост, шлях, параметри та фрагменти. Ось деякі основні методи та властивості, які можна використовувати для роботи з URL-адресами в JavaScript:</p>
+
+    <ol>
+        <li>
+            <code>URL</code>: Це вбудований об'єкт, який представляє URL-адресу. Він має властивості, такі як <code>href</code>, <code>protocol</code>, <code>hostname</code>, <code>pathname</code>, <code>search</code> та інші, які дозволяють отримувати різні частини URL.
+            <pre><code class="language-javascript">
+let url = new URL('https://example.com/path?query=value');
+console.log(url.hostname); // виведе "example.com"
+console.log(url.search);   // виведе "?query=value"
+            </code></pre>
+        </li>
+        <li>
+            <code>URLSearchParams</code>: Цей об'єкт дозволяє працювати з параметрами запиту в URL.
+            <pre><code class="language-javascript">
+let params = new URLSearchParams('key1=value1&key2=value2');
+console.log(params.get('key1')); // виведе "value1"
+            </code></pre>
+        </li>
+        <li>
+            <code>encodeURIComponent</code> та <code>decodeURIComponent</code>: Ці функції використовуються для кодування та декодування компонентів URL.
+            <pre><code class="language-javascript">
+let encoded = encodeURIComponent('шлях з пробілами');
+console.log(encoded); // виведе "%D1%88%D0%BB%D1%8F%D1%85%20%D0%B7%20%D0%BF%D1%80%D0%BE%D0%B1%D1%96%D0%BB%D0%B0%D0%BC%D0%B8"
+let decoded = decodeURIComponent(encoded);
+console.log(decoded); // виведе "шлях з пробілами"
+            </code></pre>
+        </li>
+    </ol>
+
+    <p>Використання цих методів дозволяє зручно працювати з URL-адресами в JavaScript, що є важливим для багатьох веб-застосунків та скриптів.</p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
