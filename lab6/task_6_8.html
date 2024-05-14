@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Звіти з лабораторних робіт</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+     rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <header class="title">
+      <div class="title-text">
+        <p>
+          ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ <br/>
+          З ДИСЦИПЛІНИ "WEB-ОРІЄНТОВАНІ ТЕХНОЛОГІЇ.<br/>
+          ОСНОВИ FRONTEND та BACKEND РОЗРОБОК"
+        </p>
+        <p>Студент групи ІО-11 Куделя Олександр Сергійович</p>
+      </div>
+    </header>
+    <main>
+      <div class="labs">
+        <a href="../lab1/1lab.html" class="lab">Лабораторна <br/> робота №1</a>
+        <a href="../lab2/2lab.html" class="lab">Лабораторна <br/> робота №2</a>
+        <a href="../lab3/3lab.html" class="lab">Лабораторна <br/> робота №3</a>
+        <a href="../lab4/4lab.html" class="lab">Лабораторна <br/> робота №4</a>
+        <a href="../lab5/5lab.html" class="lab">Лабораторна <br/> робота №5</a>
+        <a href="6lab.html" class="lab">Лабораторна <br/> робота №6</a>
+        <a href="#" class="lab">Лабораторна <br/> робота №7</a>
+        <a href="#" class="lab">Лабораторна <br/> робота №8</a>
+        <a href="#" class="lab">Лабораторна <br/> робота №9</a>
+      </div>
+      <div class="labs-content">
+        <div class="list">
+          <a href="topic-aim_5_1.html" class="list-item">Тема, мета, місце розташування лаби №5.1</a>
+          <a href="task_5_1_1.html" class="list-item-2">Завдання №1 </a>
+          <a href="task_5_1_3.html" class="list-item-2">Завдання №3 </a>
+          <a href="task_5_1_5.html" class="list-item-2">Завдання №5 </a>
+          <a href="task_5_1_7.html" class="list-item-2">Завдання №7 </a>
+          <a href="task_5_1_9.html" class="list-item-2">Завдання №9 </a>
+          <a href="task_5_1_10.html" class="list-item-2">Завдання №10 </a>
+          <a href="topic-aim_6.html" class="list-item">Тема, мета, місце розташування лаби №6</a>
+          <a href="task_6_1.html" class="list-item-2">Завдання №1 </a>
+          <a href="task_6_3.html" class="list-item-2">Завдання №3 </a>
+          <a href="task_6_5.html" class="list-item-2">Завдання №5 </a>
+          <a href="task_6_7.html" class="list-item-2">Завдання №7 </a>
+          <a href="task_6_8.html" class="list-item-2">Завдання №8 </a>
+          <a href="task_6_9.html" class="list-item-2">Завдання №9 </a>
+          <a href="task_6_10.html" class="list-item-2">Завдання №10 </a>
+          <a href="conclusions.html" class="list-item">Висновки</a>
+        </div>
+        <div class="list-content">
+          <h4>Завдання №8:</h4>
+          <p>Напиши скрипт управління формою логіна.<br></p>
+          <xmp>
+            <form class="login-form">
+              <label>
+                Email
+                <input type="email" name="email" />
+              </label>
+              <label>
+                Password
+                <input type="password" name="password" />
+              </label>
+              <button type="submit">Log in</button>
+            </form>
+          </xmp>
+          <ol>
+            <li>Обробка відправлення форми form.login-form повинна відбуватися за подією submit.</li>
+            <li>Під час відправлення форми сторінка не повинна перезавантажуватися.</li>
+            <li>Якщо при сабміті у формі є незаповнені поля, виводь alert з попередженням про те, що 'All form fields must be filled in'. Не додавай на інпути атрибут required, валідація має відбуватися саме через JS.</li>
+            <li>Якщо користувач заповнив усі поля і відправив форму, збери значення полів в об'єкт з двома властивостями, де ключ — це ім'я інпутів, а значення — відповідні значення цих інпутів, очищені від пробілів по краях. Для доступу до елементів форми використовуй властивість elements.</li>
+            <li>При сабміті форми виведи об'єкт із введеними даними в консоль і очисти значення полів форми методом reset.</li>
+          </ol>
+
+          <h4>Код JavaScript:</h4>
+          <xmp>
+            document.querySelector('.login-form').addEventListener('submit', function(event) {
+              event.preventDefault();
+            
+              var email = event.target.elements.email.value.trim();
+              var password = event.target.elements.password.value.trim();
+            
+              if (!email || !password) {
+                alert('All form fields must be filled in');
+                return;
+              }
+            
+              let formData = {
+                email: email,
+                password: password
+              };
+            
+              console.log(formData);
+            
+              event.target.reset();
+            });
+        
+          </xmp>
+
+          <h4>Код html:</h4>
+          <xmp>
+            <form class="login-form">
+              <label>
+                Email
+                <input type="email" name="email" />
+              </label>
+              <label>
+                Пароль
+                <input type="password" name="password" />
+              </label>
+              <button type="submit">Увійти</button>
+            </form>
+          </xmp>
+
+          <form class="login-form">
+            <label>
+              Email
+              <input type="email" name="email" />
+            </label>
+            <label>
+              Пароль
+              <input type="password" name="password" />
+            </label>
+            <button type="submit">Увійти</button>
+          </form>
+
+          <p></p>
+
+        </div>
+      </div>
+    </main>
+
+    <script>
+        document.querySelector('.login-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+      
+        var email = event.target.elements.email.value.trim();
+        var password = event.target.elements.password.value.trim();
+      
+        if (!email || !password) {
+          alert('All form fields must be filled in');
+          return;
+        }
+      
+        let formData = {
+          email: email,
+          password: password
+        };
+      
+        console.log(formData);
+      
+        event.target.reset();
+      });
+
+    </script>
+  </body>
+</html>

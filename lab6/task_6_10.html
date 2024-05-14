@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Звіти з лабораторних робіт</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+     rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <header class="title">
+      <div class="title-text">
+        <p>
+          ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ <br/>
+          З ДИСЦИПЛІНИ "WEB-ОРІЄНТОВАНІ ТЕХНОЛОГІЇ.<br/>
+          ОСНОВИ FRONTEND та BACKEND РОЗРОБОК"
+        </p>
+        <p>Студент групи ІО-11 Куделя Олександр Сергійович</p>
+      </div>
+    </header>
+    <main>
+      <div class="labs">
+        <a href="../lab1/1lab.html" class="lab">Лабораторна <br/> робота №1</a>
+        <a href="../lab2/2lab.html" class="lab">Лабораторна <br/> робота №2</a>
+        <a href="../lab3/3lab.html" class="lab">Лабораторна <br/> робота №3</a>
+        <a href="../lab4/4lab.html" class="lab">Лабораторна <br/> робота №4</a>
+        <a href="../lab5/5lab.html" class="lab">Лабораторна <br/> робота №5</a>
+        <a href="6lab.html" class="lab">Лабораторна <br/> робота №6</a>
+        <a href="#" class="lab">Лабораторна <br/> робота №7</a>
+        <a href="#" class="lab">Лабораторна <br/> робота №8</a>
+        <a href="#" class="lab">Лабораторна <br/> робота №9</a>
+      </div>
+      <div class="labs-content">
+        <div class="list">
+          <a href="topic-aim_5_1.html" class="list-item">Тема, мета, місце розташування лаби №5.1</a>
+          <a href="task_5_1_1.html" class="list-item-2">Завдання №1 </a>
+          <a href="task_5_1_3.html" class="list-item-2">Завдання №3 </a>
+          <a href="task_5_1_5.html" class="list-item-2">Завдання №5 </a>
+          <a href="task_5_1_7.html" class="list-item-2">Завдання №7 </a>
+          <a href="task_5_1_9.html" class="list-item-2">Завдання №9 </a>
+          <a href="task_5_1_10.html" class="list-item-2">Завдання №10 </a>
+          <a href="topic-aim_6.html" class="list-item">Тема, мета, місце розташування лаби №6</a>
+          <a href="task_6_1.html" class="list-item-2">Завдання №1 </a>
+          <a href="task_6_3.html" class="list-item-2">Завдання №3 </a>
+          <a href="task_6_5.html" class="list-item-2">Завдання №5 </a>
+          <a href="task_6_7.html" class="list-item-2">Завдання №7 </a>
+          <a href="task_6_8.html" class="list-item-2">Завдання №8 </a>
+          <a href="task_6_9.html" class="list-item-2">Завдання №9 </a>
+          <a href="task_6_10.html" class="list-item-2">Завдання №10 </a>
+          <a href="conclusions.html" class="list-item">Висновки</a>
+        </div>
+        <div class="list-content">
+          <h4>Завдання №10:</h4>
+          <p>Напиши скрипт створення й очищення колекції елементів з наступним функціоналом.
+            Є input, у який користувач вводить бажану кількість елементів. Після натискання на кнопку Create має рендеритися (додаватися в DOM) колекція з відповідною кількістю елементів і очищатися значення в інпуті. При повторному натисканні на кнопку Create поверх старої колекції має рендеритись нова. Після натискання на кнопку Destroy колекція елементів має очищатися.
+            </p>
+            <xmp>
+              <div id="controls">
+                <input type="number" min="1" max="100" step="1" />
+                <button type="button" data-create>Create</button>
+                <button type="button" data-destroy>Destroy</button>
+              </div>
+              <div id="boxes"></div>
+            </xmp>
+            <p>Після натискання користувачем на кнопку Create треба провалідувати значення в input, воно має бути в межах від 1 до 100 включно. Тільки якщо воно задоволяє умову, мають додаватися нові дів елементи в DOM.
+              Для рендеру елементів на сторінці створи функцію createBoxes(amount), яка приймає один параметр — число, що зберігає кількість елементів для рендеру. Функція має створювати стільки дів елементів, скільки вказано в параметрі amount і додавати їх у DOM дочірніми елементами для div#boxes.
+              </p>
+            <ol>
+              <li>Розміри першого <div> елемента мають бути 30px на 30px.</li>
+              <li>Кожен наступний елемент повинен бути ширшим і вищим від попереднього на 10px.</li>
+              <li>Усі елементи повинні мати випадковий колір фону. Використовуй готову функцію getRandomHexColor() для отримання випадкового кольору.</li>
+            </ol>
+            <xmp>
+              function getRandomHexColor() {
+                return `#${Math.floor(Math.random() * 16777215)
+                  .toString(16)
+                  .padStart(6, 0)}`;
+              }
+            </xmp>
+            <p>Для очищення колекції після натискання на кнопку Destroy створи функцію destroyBoxes(), яка очищає вміст div#boxes, у такий спосіб видаляючи всі створені елементи.</p>
+
+          <h4>Код JavaScript:</h4>
+          <xmp>
+            function getRandomHexColor() {
+              return `#${Math.floor(Math.random() * 16777215)
+                .toString(16)
+                .padStart(6, 0)}`;
+            }
+            
+            function createBoxes(amount) {
+              const boxesContainer = document.querySelector('#boxes');
+              boxesContainer.innerHTML = '';
+            
+              for (let i = 0; i < amount; i++) {
+                const box = document.createElement('div');
+                box.style.width = `${30 + i * 10}px`;
+                box.style.height = `${30 + i * 10}px`;
+                box.style.backgroundColor = getRandomHexColor();
+                boxesContainer.appendChild(box);
+              }
+            }
+            
+            function destroyBoxes() {
+              document.querySelector('#boxes').innerHTML = '';
+            }
+            
+            document.querySelector('[data-create]').addEventListener('click', function() {
+              const input = document.querySelector('input[type="number"]');
+              const amount = input.value;
+            
+              if (amount < 1 || amount > 100) {
+                alert('Введіть число від 1 до 100');
+                return;
+              }
+            
+              createBoxes(amount);
+              input.value = '';
+            });
+            
+            document.querySelector('[data-destroy]').addEventListener('click', destroyBoxes);
+        
+          </xmp>
+
+          <h4>Код html:</h4>
+          <xmp>
+            <div id="controls">
+              <input type="number" min="1" max="100" step="1" />
+              <button type="button" data-create>Create</button>
+              <button type="button" data-destroy>Destroy</button>
+            </div>
+            
+            <div id="boxes"></div>
+          </xmp>
+
+          <div id="controls">
+            <input type="number" min="1" max="100" step="1" />
+            <button type="button" data-create>Create</button>
+            <button type="button" data-destroy>Destroy</button>
+          </div>
+          
+          <div id="boxes"></div>
+
+          <p></p>
+
+        </div>
+      </div>
+    </main>
+
+    <script>
+      function getRandomHexColor() {
+            return `#${Math.floor(Math.random() * 16777215)
+              .toString(16)
+              .padStart(6, 0)}`;
+          }
+          
+          function createBoxes(amount) {
+            const boxesContainer = document.querySelector('#boxes');
+            boxesContainer.innerHTML = '';
+          
+            for (let i = 0; i < amount; i++) {
+              const box = document.createElement('div');
+              box.style.width = `${30 + i * 10}px`;
+              box.style.height = `${30 + i * 10}px`;
+              box.style.backgroundColor = getRandomHexColor();
+              boxesContainer.appendChild(box);
+            }
+          }
+          
+          function destroyBoxes() {
+            document.querySelector('#boxes').innerHTML = '';
+          }
+          
+          document.querySelector('[data-create]').addEventListener('click', function() {
+            const input = document.querySelector('input[type="number"]');
+            const amount = input.value;
+          
+            if (amount < 1 || amount > 100) {
+              alert('Введіть число від 1 до 100');
+              return;
+            }
+          
+            createBoxes(amount);
+            input.value = '';
+          });
+          
+          document.querySelector('[data-destroy]').addEventListener('click', destroyBoxes);
+    </script>
+  </body>
+</html>

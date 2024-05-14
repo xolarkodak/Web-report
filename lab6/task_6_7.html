@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Звіти з лабораторних робіт</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+     rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <header class="title">
+      <div class="title-text">
+        <p>
+          ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ <br/>
+          З ДИСЦИПЛІНИ "WEB-ОРІЄНТОВАНІ ТЕХНОЛОГІЇ.<br/>
+          ОСНОВИ FRONTEND та BACKEND РОЗРОБОК"
+        </p>
+        <p>Студент групи ІО-11 Куделя Олександр Сергійович</p>
+      </div>
+    </header>
+    <main>
+      <div class="labs">
+        <a href="../lab1/1lab.html" class="lab">Лабораторна <br/> робота №1</a>
+        <a href="../lab2/2lab.html" class="lab">Лабораторна <br/> робота №2</a>
+        <a href="../lab3/3lab.html" class="lab">Лабораторна <br/> робота №3</a>
+        <a href="../lab4/4lab.html" class="lab">Лабораторна <br/> робота №4</a>
+        <a href="../lab5/5lab.html" class="lab">Лабораторна <br/> робота №5</a>
+        <a href="6lab.html" class="lab">Лабораторна <br/> робота №6</a>
+        <a href="#" class="lab">Лабораторна <br/> робота №7</a>
+        <a href="#" class="lab">Лабораторна <br/> робота №8</a>
+        <a href="#" class="lab">Лабораторна <br/> робота №9</a>
+      </div>
+      <div class="labs-content">
+        <div class="list">
+          <a href="topic-aim_5_1.html" class="list-item">Тема, мета, місце розташування лаби №5.1</a>
+          <a href="task_5_1_1.html" class="list-item-2">Завдання №1 </a>
+          <a href="task_5_1_3.html" class="list-item-2">Завдання №3 </a>
+          <a href="task_5_1_5.html" class="list-item-2">Завдання №5 </a>
+          <a href="task_5_1_7.html" class="list-item-2">Завдання №7 </a>
+          <a href="task_5_1_9.html" class="list-item-2">Завдання №9 </a>
+          <a href="task_5_1_10.html" class="list-item-2">Завдання №10 </a>
+          <a href="topic-aim_6.html" class="list-item">Тема, мета, місце розташування лаби №6</a>
+          <a href="task_6_1.html" class="list-item-2">Завдання №1 </a>
+          <a href="task_6_3.html" class="list-item-2">Завдання №3 </a>
+          <a href="task_6_5.html" class="list-item-2">Завдання №5 </a>
+          <a href="task_6_7.html" class="list-item-2">Завдання №7 </a>
+          <a href="task_6_8.html" class="list-item-2">Завдання №8 </a>
+          <a href="task_6_9.html" class="list-item-2">Завдання №9 </a>
+          <a href="task_6_10.html" class="list-item-2">Завдання №10 </a>
+          <a href="conclusions.html" class="list-item">Висновки</a>
+        </div>
+        <div class="list-content">
+          <h4>Завдання №7:</h4>
+          <p>Напиши скрипт, який: <br>
+            1.	Порахує і виведе в консоль кількість категорій в ul#categories, тобто елементів li.item.<br>
+            
+            2.	Для кожного элемента li.item у списку ul#categories, знайде і виведе в консоль текст заголовку елемента (тегу h2) і кількість елементів в категорії (усіх li, вкладених в нього).<br>
+            Для виконання цього завдання потрібно використати метод forEach() і властивості навігації по DOM.<br>
+            
+            В результаті, в консолі будуть виведені наступні повідомлення.<br>
+            
+
+          </p>
+          <h4>Код JavaScript:</h4>
+          <xmp>
+            const categoriesList = document.getElementById('categories');
+
+            // Отримання елемента для виведення результатів
+            const resultsElement = document.getElementById('results');
+
+            // Порахунок кількості категорій
+            const categoryItems = categoriesList.querySelectorAll('li.item');
+            const categoryCount = categoryItems.length;
+
+            // Виведення кількості категорій в консоль
+            console.log(`Кількість категорій: ${categoryCount}`);
+
+            // Отримання інформації про кожну категорію
+            categoryItems.forEach(categoryItem => {
+              // Отримання заголовка категорії
+              const categoryTitle = categoryItem.querySelector('h2').textContent;
+
+              // Отримання списку елементів категорії
+              const categoryElements = categoryItem.querySelectorAll('li');
+              const elementCount = categoryElements.length;
+
+              // Виведення інформації про категорію в консоль
+              console.log(`Категорія: ${categoryTitle}`);
+              console.log(`Кількість елементів: ${elementCount}`);
+            });
+        
+          </xmp>
+          
+          <p>Надані дані</p>
+          <ul id="categories">
+            <li class="item">
+              <h2>Animals</h2>
+              <ul>
+                <li>Cat</li>
+                <li>Hamster</li>
+                <li>Horse</li>
+                <li>Parrot</li>
+              </ul>
+            </li>
+            <li class="item">
+              <h2>Products</h2>
+              <ul>
+                <li>Bread</li>
+                <li>Prasley</li>
+                <li>Cheese</li>
+              </ul>
+            </li>
+            <li class="item">
+              <h2>Technologies</h2>
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Node.js</li>
+              </ul>
+            </li>
+          </ul>
+
+          <p></p>
+
+        </div>
+      </div>
+    </main>
+
+    <script>
+        const categoriesList = document.getElementById('categories');
+
+        // Отримання елемента для виведення результатів
+        const resultsElement = document.getElementById('results');
+
+        // Порахунок кількості категорій
+        const categoryItems = categoriesList.querySelectorAll('li.item');
+        const categoryCount = categoryItems.length;
+
+        // Виведення кількості категорій в консоль
+        console.log(`Кількість категорій: ${categoryCount}`);
+
+        // Отримання інформації про кожну категорію
+        categoryItems.forEach(categoryItem => {
+          // Отримання заголовка категорії
+          const categoryTitle = categoryItem.querySelector('h2').textContent;
+
+          // Отримання списку елементів категорії
+          const categoryElements = categoryItem.querySelectorAll('li');
+          const elementCount = categoryElements.length;
+
+          // Виведення інформації про категорію в консоль
+          console.log(`Категорія: ${categoryTitle}`);
+          console.log(`Кількість елементів: ${elementCount}`);
+        });
+
+    </script>
+  </body>
+</html>
