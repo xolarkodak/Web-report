@@ -81,8 +81,8 @@
             document.querySelector('.login-form').addEventListener('submit', function(event) {
               event.preventDefault();
             
-              var email = event.target.elements.email.value.trim();
-              var password = event.target.elements.password.value.trim();
+              let email = event.target.elements.email.value.trim();
+              let password = event.target.elements.password.value.trim();
             
               if (!email || !password) {
                 alert('All form fields must be filled in');
@@ -138,8 +138,8 @@
         document.querySelector('.login-form').addEventListener('submit', function(event) {
         event.preventDefault();
       
-        var email = event.target.elements.email.value.trim();
-        var password = event.target.elements.password.value.trim();
+        let email = event.target.elements.email.value.trim();
+        let password = event.target.elements.password.value.trim();
       
         if (!email || !password) {
           alert('All form fields must be filled in');
